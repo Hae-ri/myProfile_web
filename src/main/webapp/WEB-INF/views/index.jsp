@@ -13,7 +13,7 @@
 	<%@ include file="include/header.jsp" %>
 
 	<center>
-	<table class="t-type01" width="1200" border="0" cellpadding="0" cellspacing="20">
+	<table class="t-type01" width="75%" border="0" cellpadding="20" cellspacing="0">
 		<tr>
 			<td><span class="title01">개발자 이해리의 홈페이지</span></td>
 		</tr>
@@ -21,13 +21,13 @@
 			<td><span class="title02">저는 개발직을 원하는 개발자 이해리입니다. 연락주세요!</span></td>
 		</tr>
 		<tr>
-			<table width="1100" border="0" cellpadding="0" cellspacing="10">
+			<table width="70%" border="0" cellpadding="10" cellspacing="0">
 				<tr>
 					<td bgcolor="#D5D5D5">
 						<span class="s-text01">J</span><span class="s-text02">AVA</span>
 					</td>
 					<td height="500" bgcolor="#353535" rowspan="6" align="center">
-						<!-- <img alt="" src="${pageContext.request.contextPath }/resources/img/back.jpg">  -->
+						<!-- <img alt="♪" src="${pageContext.request.contextPath }/resources/img/back.jpg">  -->
 						<img src="<c:url value="/resources/img/back.jpg" />">
 					</td>
 				</tr>
