@@ -19,7 +19,14 @@ td.td-type01 {
 	font-weight: bold;	
 }
 
-#input-01 {
+td.td-type02 {
+	font-size: 20px;
+	color: #a0a0a0;
+	font-family: Malgun Gothic;
+	font-weight: bold;	
+}
+
+#input01 {
 	font-size: 15px;
 	font-family: Arial;	
 	color: #636363;

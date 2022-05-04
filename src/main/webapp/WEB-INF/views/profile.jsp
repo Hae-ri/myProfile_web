@@ -25,10 +25,12 @@
 				<tr>
 					<td height="500" bgcolor="#D5D5D5" align="center">
 						<table border="0" cellpadding="10" cellspacing="0">
-							<tr class="td-type01">
+							<tr>
+								<td class="td-type02">
 								안녕하세요. 개발자 이해리입니다. <br>
 								보시고 계신 페이지는 Spring Boot FrameWork으로 개발되었습니다. <br>
 								웹 어플리케이션 개발 관련하여 궁금하신 점은 <a href="question">question</a> 게시판을 이용해주세요.
+								</td>
 							</tr>			
 						</table>
 					

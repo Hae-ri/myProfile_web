@@ -45,4 +45,10 @@ public class HomeController {
 		
 		return "profile";
 	}
+
+	@RequestMapping(value="/question")
+	public String question() {
+		
+		return "question";
+	}
 }

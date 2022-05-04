@@ -26,9 +26,9 @@
 					<td bgcolor="#D5D5D5">
 						<span class="s-text01">J</span><span class="s-text02">AVA</span>
 					</td>
-					<td height="500" bgcolor="#353535" rowspan="6" align="center">
+					<td height="500" bgcolor="#D5D5D5" rowspan="6" align="center">
 						<!-- <img alt="♪" src="${pageContext.request.contextPath }/resources/img/back.jpg">  -->
-						<img src="<c:url value="/resources/img/back.jpg" />">
+						<img src="<c:url value="/resources/img/back2.jpg" />">
 					</td>
 				</tr>
 				<tr>

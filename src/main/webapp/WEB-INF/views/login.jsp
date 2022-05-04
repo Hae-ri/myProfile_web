@@ -28,11 +28,11 @@
 							<form action="loginOk" method="post">
 								<tr>
 									<td class="td-type01">아 이 디</td>
-									<td align="center"><input type="text" name="id" id="input-01"></td>
+									<td align="center"><input type="text" name="id" id="input01"></td>
 								</tr>
 								<tr>
 									<td class="td-type01">비밀번호</td>
-									<td align="center"><input type="password" name="pw" id="input-01"></td>
+									<td align="center"><input type="password" name="pw" id="input01"></td>
 								</tr>
 								<tr>
 									<td colspan="2" align="center">

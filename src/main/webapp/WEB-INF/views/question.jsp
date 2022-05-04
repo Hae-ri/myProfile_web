@@ -7,7 +7,7 @@
 <title>## LeeHaeRi Profile ##</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/members.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/board.js"></script>
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
@@ -26,31 +26,27 @@
 				<tr>
 					<td height="500" bgcolor="#D5D5D5" align="center">
 						<table border="0" cellpadding="0" cellspacing="20">
-							<form action="joinOk" method="post" name="reg_frm">
+							<form action="write" method="post" name="reg_frm">
 								<tr>
 									<td class="td-type01">아이디</td>
-									<td align="center"><input type="text" name="id" id="input01"></td>
-								</tr>
-								<tr>
-									<td class="td-type01">비밀번호</td>
-									<td align="center"><input type="password" name="pw" id="input01"></td>
-								</tr>
-								<tr>
-									<td class="td-type01">비밀번호 확인</td>
-									<td align="center"><input type="password" name="pw_check" id="input01"></td>
+									<td><input type="text" name="qid" id="input01" value="GUEST" readonly="readonly"></td>
 								</tr>
 								<tr>
 									<td class="td-type01">이름</td>
-									<td align="center"><input type="text" name="name" id="input01"></td>
+									<td><input type="text" name="qname" id="input01"></td>
+								</tr>
+								<tr>
+									<td class="td-type01">내용</td>
+									<td><textarea name="qcontent" rows="5" id="input01"></textarea></td>
 								</tr>
 								<tr>
 									<td class="td-type01">이메일</td>
-									<td align="center"><input type="email" name="email" id="input01"></td>
+									<td><input type="email" name="qemail" id="input01"></td>
 								</tr>
 								<tr>
 									<td colspan="2" align="center">
-										<input id="button01" type="button" value="회원가입" onclick="infoConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
-										<input id="button01" type="button" value="로그인" onclick="javascript:window.location='login'">
+										<input id="button01" type="button" value="글입력" onclick="boardConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
+										<input id="button01" type="button" value="글목록" onclick="javascript:window.location='list'">
 									</td>
 								</tr>		
 							</form>						

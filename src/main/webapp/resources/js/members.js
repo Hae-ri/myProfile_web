@@ -23,7 +23,7 @@ function infoConfirm() {
 	}
 	
 	if(document.reg_frm.pw_check.value.length == 0) {
-		alert("비밀번호 체크는 필수사항입니다.");
+		alert("비밀번호 확인은 필수사항입니다.");
 		reg_frm.pw_check.focus();
 		return;
 	}
