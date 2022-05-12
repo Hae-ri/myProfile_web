@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,7 @@
 <title>## LeeHaeRi Profile ##</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/span.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/table.css">
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/board.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/members.js"></script>
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
@@ -26,35 +27,39 @@
 				<tr>
 					<td height="500" bgcolor="#D5D5D5" align="center">
 						<table border="0" cellpadding="0" cellspacing="20">
-							<form action="write" method="post" name="reg_frm">
+							<tr>
+								<td class="td-type03" colspan="2">
+									${memberDto.mid }님의 회원 정보를 수정하였습니다.
+								</td>
+							</tr>
+							<form action="infoModifyOk" method="post" name="reg_frm">
+							<input type="hidden" name="id" value="${memberDto.mid }">
+
 								<tr>
 									<td class="td-type01">아이디</td>
-									<td><input type="text" name="qid" id="input01" 
-										value="
-											<%
-												if(session.getAttribute("id") != null) {
-													out.println(session.getAttribute("id"));
-												}else {
-													out.println("GUEST");
-												}
-											%>" readonly></td>
+									<td id="memberinfo">${memberDto.mid }</td>
 								</tr>
+								<tr>
+									<td class="td-type01">비밀번호</td>
+									<td id="memberinfo">*****</td>
+								</tr>
+
 								<tr>
 									<td class="td-type01">이름</td>
-									<td><input type="text" name="qname" id="input01"></td>
-								</tr>
-								<tr>
-									<td class="td-type01">내용</td>
-									<td><textarea name="qcontent" rows="5" id="input01"></textarea></td>
+									<td id="memberinfo">${memberDto.mname }</td>
 								</tr>
 								<tr>
 									<td class="td-type01">이메일</td>
-									<td><input type="email" name="qemail" id="input01"></td>
+									<td id="memberinfo">${memberDto.memail }</td>
+								</tr>
+								<tr>
+									<td class="td-type01">가입일</td>
+									<td id="memberinfo">${memberDto.mdate }</td>
 								</tr>
 								<tr>
 									<td colspan="2" align="center">
-										<input id="button01" type="button" value="글입력" onclick="boardConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
-										<input id="button01" type="button" value="글목록" onclick="javascript:window.location='list'">
+										<input id="button01" type="button" value="정보수정" onclick="javascript:window.location='infoModify'">&nbsp;&nbsp;&nbsp;&nbsp;
+										<input id="button01" type="button" value="처음으로" onclick="javascript:window.location='index'">
 									</td>
 								</tr>		
 							</form>						

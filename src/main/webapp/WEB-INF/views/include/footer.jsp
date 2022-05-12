@@ -16,7 +16,7 @@
 			<td height="25" align="center">Copyright ⓒ HaeriLee. All Rights Reserved</td>
 		</tr>
 		<tr>
-			<td height="25" align="center">이 홈페이지는 Spring Framework으로 만들었습니다. 만든 이 이해리 E-Mail:<a href="mailto:wantyoul77@gmail.com">wantyoul77@gmail.com</a></td>
+			<td height="25" align="center">이 홈페이지는 Spring Framework으로 개발되었습니다. 만든 이 이해리 E-Mail:<a href="mailto:wantyoul77@gmail.com">wantyoul77@gmail.com</a></td>
 		</tr>	
 	</table>
 </body>

@@ -30,20 +30,32 @@
 							
 								<%
 									int checkID = Integer.parseInt(request.getAttribute("checkIdFlag").toString());
-									if(checkID == 1) {
+									int checkPW = Integer.parseInt(request.getAttribute("checkPwFlag").toString());
+								
+									if(checkID != 1) {
 								%>
 									<srcipt language="JavaScript">
-										alert("입력하신 아이디는 이미 사용 중입니다. 다른 아이디를 입력하세요.");
+										alert("입력하신 아이디는 존재하지 않는 아이디입니다. 아이디를 다시 확인해주세요.");
 										history.go(-1);									
 									</srcipt>								
 								<% 
-									} 
+									}else if(checkPW == 0) {
+								%>
+									<srcipt language="JavaScript">
+										alert("입력하신 비밀번호가 틀렸습니다. 다시 확인해주세요.");
+										history.go(-1);									
+									</srcipt>	
+								
+								<% 
+									}else {
+										session.setAttribute("ValidMem", "yes");
+									}
 								%>
 								
 								<tr>
 									<td class="td-type02">
-										<b>${mname }</b> 님 회원 가입을 축하드립니다! <br>
-										가입하신 아이디는 <b>${mid }</b> 입니다.									
+										<b>${mname }</b> 님 안녕하세요. <br>
+										아이디 <b>${mid }</b> 로 로그인에 성공하셨습니다.									
 									</td>
 								</tr>
 					

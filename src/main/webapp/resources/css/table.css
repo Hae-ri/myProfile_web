@@ -34,19 +34,61 @@ td.td-type01 {
 
 td.td-type02 {
 	font-size: 20px;
-	color: #a0a0a0;
+	color: #5f5f5f;
 	font-family: Malgun Gothic;
 	font-weight: bold;	
 }
 
+td.td-type03 {
+	font-size: 22px;
+	color: #969696;
+	font-family: Malgun Gothic;
+	font-weight: bold;	
+}
+
+/*문의 게시판 테이블*/
+td.td-type04 { 
+	font-size: 20px;
+	color: #f3f3f3;
+	font-family: Malgun Gothic;
+	font-weight: bold;	
+	border-style: solid;
+	border-color: #ffffff;
+	background-color: #8a8a8a;
+	text-align:center;
+	border-width:1px;
+}
+
+td.td-type05 { 
+	font-size: 18px;
+	color: #a5a5a5;
+	font-family: Malgun Gothic;	
+	border-style: solid;
+	border-color: #ffffff;
+	background-color: #e4e4e4;
+	text-align:center;
+	border-width:1px;
+}
+
+
 #input01 {
 	font-size: 15px;
-	font-family: Arial;	
+	font-family: Arial,Malgun Gothic;	
 	color: #636363;
 	border: 1px solid #c0c0c0;
 	background-color: #ffffff;
 	width: 220px;
 	padding: 5px;
+}
+
+#memberinfo {
+	font-size: 20px;
+	font-weight: bold;	
+	font-family: Arial,Malgun Gothic ;	
+	color: #969696;
+	width: 220px;
+	padding: 5px;
+
 }
 
 #button01 {

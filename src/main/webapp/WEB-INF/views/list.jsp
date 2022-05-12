@@ -26,12 +26,27 @@
 					<td height="500" bgcolor="#D5D5D5" align="center">
 						<table border="0" cellpadding="10" cellspacing="0">
 							<tr>
-								<td class="td-type02">
-								안녕하세요. 개발자 이해리입니다. <br>
-								보시고 계신 페이지는 Spring Boot FrameWork으로 개발되었습니다. <br>
-								웹 어플리케이션 개발 관련하여 궁금하신 점은 <a href="question">문의하기</a> 게시판을 이용해주세요.
-								</td>
-							</tr>			
+								<td class="td-type04">번호</td>
+								<td class="td-type04">내용</td>
+								<td class="td-type04">이름</td>
+								<td class="td-type04">아이디</td>
+								<td class="td-type04">글쓴 날짜</td>
+
+							</tr>	
+							<tr>
+								<td class="td-type05">2</td>
+								<td class="td-type05">안녕</td>
+								<td class="td-type05">김하얀</td>
+								<td class="td-type05">white</td>
+								<td class="td-type05">2022-05-12 12:30:30</td>
+							</tr>		
+							<tr>
+								<td class="td-type05">1</td>
+								<td class="td-type05">반가워</td>
+								<td class="td-type05">김하얀</td>
+								<td class="td-type05">white</td>
+								<td class="td-type05">2022-05-12 12:30:30</td>
+							</tr>	
 						</table>
 					
 					</td>
