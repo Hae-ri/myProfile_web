@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,34 +27,26 @@
 				<tr>
 					<td height="500" bgcolor="#D5D5D5" align="center">
 						<table border="0" cellpadding="0" cellspacing="20">
-							<form action="joinOk" method="post" name="reg_frm">
+							
+								<%
+									int checkID = Integer.parseInt(request.getAttribute("checkIdFlag").toString());
+									if(checkID == 1) {
+								%>
+									<srcipt language="JavaScript">
+										alert("입력하신 아이디는 이미 사용 중입니다. 다른 아이디를 입력하세요.");
+										history.go(-1);									
+									</srcipt>								
+								<% 
+									} 
+								%>
+								
 								<tr>
-									<td class="td-type01">아이디</td>
-									<td align="center"><input type="text" name="id" id="input01"></td>
-								</tr>
-								<tr>
-									<td class="td-type01">비밀번호</td>
-									<td align="center"><input type="password" name="pw" id="input01"></td>
-								</tr>
-								<tr>
-									<td class="td-type01">비밀번호 확인</td>
-									<td align="center"><input type="password" name="pw_check" id="input01"></td>
-								</tr>
-								<tr>
-									<td class="td-type01">이름</td>
-									<td align="center"><input type="text" name="name" id="input01"></td>
-								</tr>
-								<tr>
-									<td class="td-type01">이메일</td>
-									<td align="center"><input type="email" name="email" id="input01"></td>
-								</tr>
-								<tr>
-									<td colspan="2" align="center">
-										<input id="button01" type="button" value="회원가입" onclick="infoConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
-										<input id="button01" type="button" value="로그인" onclick="javascript:window.location='login'">
+									<td class="td-type02">
+										<b>${mname }</b> 님 회원 가입을 축하드립니다.! <br>
+										가입하신 아이디는 <b>${mid }</b> 입니다.									
 									</td>
-								</tr>		
-							</form>						
+								</tr>
+					
 						</table>
 					
 					</td>

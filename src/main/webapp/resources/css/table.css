@@ -17,6 +17,14 @@ table.t-type02 {
 	background-color: #000000;
 }
 
+table.t-type03 {
+	font-size: 14px;
+	font-family: Malgun Gothic;
+	color: #ffffff;
+	font-weight: normal;
+	background-color: #000000;
+}
+
 td.td-type01 {
 	font-size: 20px;
 	color: #a0a0a0;
