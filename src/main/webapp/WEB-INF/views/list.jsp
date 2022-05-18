@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,24 +34,33 @@
 								<td class="td-type04">이름</td>
 								<td class="td-type04">아이디</td>
 								<td class="td-type04">글쓴 날짜</td>
-
 							</tr>	
+							<c:forEach items="${list }" var="dto">
 							<tr>
-								<td class="td-type05">2</td>
-								<td class="td-type05">안녕</td>
-								<td class="td-type05">김하얀</td>
-								<td class="td-type05">white</td>
-								<td class="td-type05">2022-05-12 12:30:30</td>
+								<td class="td-type05">${dto.qnum }</td>
+								<td class="td-type05" width="300" ><a href="qview?qum=${dto.qnum }">
+								<c:choose>
+									<c:when test="${fn:length(dto.qcontent) > 25 }">
+										<c:out value="${fn:substring(dto.qcontent,0,24)}" />....
+									</c:when>
+									<c:otherwise>
+										<c:out value="${dto.qcontent }"/>
+									</c:otherwise>
+								</c:choose>
+								</a></td>
+								<td class="td-type05">${dto.qname }</td>
+								<td class="td-type05">${dto.qid }</td>
+								<td class="td-type05">
+									<c:out value="${fn:substring(dto.qdate,0,16) }"></c:out>
+								</td>
 							</tr>		
+							</c:forEach>
 							<tr>
-								<td class="td-type05">1</td>
-								<td class="td-type05">반가워</td>
-								<td class="td-type05">김하얀</td>
-								<td class="td-type05">white</td>
-								<td class="td-type05">2022-05-12 12:30:30</td>
-							</tr>	
+								<td colspan="5" align="right">
+									<input id="button01" type="button" value="질문하기" onclick="javascript:window.location='question'">
+								</td>
+							</tr>
 						</table>
-					
 					</td>
 				</tr>
 			</table>

@@ -155,6 +155,15 @@ public class HomeController {
 		return "question";
 	}
 	
+	@RequestMapping(value="/qview")
+	public String qview(HttpServletRequest request, Model model) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		model.addAttribute("qview", dao.viewDao(request.getParameter("qnum")));
+		
+		return "qview";
+	}
+
 	@RequestMapping(value="/write")
 	public String write(HttpServletRequest request) {
 		
@@ -164,13 +173,31 @@ public class HomeController {
 		return "redirect:list";
 	}
 
-	@RequestMapping(value="/list")
+	@RequestMapping(value = "/list")
 	public String list(Model model) {
 		
-//		IDao dao = sqlSession.getMapper(IDao.class);
-//		model.addAttribute("list", dao.listDao());
+		IDao dao = sqlSession.getMapper(IDao.class);
+		model.addAttribute("list", dao.listDao());
 		
 		return "list";
+	}
+	
+	@RequestMapping(value="/delete")
+	public String delete(HttpServletRequest request) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		dao.deleteDao(request.getParameter("qnum"));
+		
+		return "redirect:list";
+	}
+	
+	@RequestMapping(value="/modify")
+	public String modify(HttpServletRequest request) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		dao.modifyDao(request.getParameter("qname"), request.getParameter("qcontent"), request.getParameter("qemail"), request.getParameter("qnum"));
+		
+		return "redirect:list";
 	}
 	
 	@RequestMapping(value="/contact")

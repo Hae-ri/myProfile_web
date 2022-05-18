@@ -26,29 +26,40 @@
 				<tr>
 					<td height="500" bgcolor="#D5D5D5" align="center">
 						<table border="0" cellpadding="0" cellspacing="20">
-							<form action="write" method="post" name="reg_frm">
+							<form action="modify" method="post" name="reg_frm">
+							<input type="hidden" name="qnum" value="${qview.qnum }">
 								<tr>
 									<td class="td-type01">아이디</td>
-									<td><input id="input01" type="text" name="qid" value="<% if(session.getAttribute("id") != null) {out.print(session.getAttribute("id")); } else {out.print("GUEST");} %>" readonly></td>
+									<!-- <td><input id="input01" type="text" name="qid" value="<% if(session.getAttribute("id") != null) {out.print(session.getAttribute("id")); } else {out.print("GUEST");} %>" readonly></td> -->
+									<td><input id="input01" type="text" name="qid" value="${qview.qid }" readonly></td>
 								</tr>
 								<tr>
 									<td class="td-type01">이름</td>
-									<td><input type="text" name="qname" id="input01"></td>
+									<td><input type="text" name="qname" id="input01" value="${qview.qname }"></td>
 								</tr>
 								<tr>
 									<td class="td-type01">내용</td>
-									<td><textarea name="qcontent" rows="5" id="input01"></textarea></td>
+									<td><textarea name="qcontent" rows="5" id="input01">${qview.qcontent }</textarea></td>
 								</tr>
 								<tr>
 									<td class="td-type01">이메일</td>
-									<td><input type="email" name="qemail" id="input01"></td>
+									<td><input type="email" name="qemail" id="input01" value="${qview.qemail }"></td>
+								</tr>
+								<tr>
+									<td class="td-type01">글쓴 날짜</td>
+									<td><input type="email" name="qdate" id="input01" value="${qview.qdate }" readonly></td>
 								</tr>
 								<tr>
 									<td colspan="2" align="center">
-										<input id="button01" type="button" value="질문입력" onclick="boardConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
-										<input id="button01" type="button" value="질문목록" onclick="javascript:window.location='list'">
+										<input id="button01" type="submit" value="질문수정">&nbsp;&nbsp;&nbsp;&nbsp;
+										<input id="button01" type="button" value="글목록" onclick="javascript:window.location='list'">
 									</td>
-								</tr>		
+								</tr>	
+								<tr>
+									<td class="td-type01" colspan="2" align="right">
+										<a href="delete?qnum=${qview.qnum }"><strike>질문삭제</strike></a>
+									</td>
+								</tr>	
 							</form>						
 						</table>
 					
