@@ -38,7 +38,7 @@
 							<c:forEach items="${list }" var="dto">
 							<tr>
 								<td class="td-type05">${dto.qnum }</td>
-								<td class="td-type05" width="300" ><a href="qview?qum=${dto.qnum }">
+								<td class="td-type05" width="300" ><a href="qview?qnum=${dto.qnum }">
 								<c:choose>
 									<c:when test="${fn:length(dto.qcontent) > 25 }">
 										<c:out value="${fn:substring(dto.qcontent,0,24)}" />....
